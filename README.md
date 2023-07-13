@@ -1,2 +1,2 @@
 # spotify
-Spotify API
+Programa de prueba para interactuar con Spotify vía API
