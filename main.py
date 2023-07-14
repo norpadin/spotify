@@ -51,10 +51,15 @@ def get_songs_by_artist(token, artist_id):
     return json_result
 
 
-token = get_token()
-result = search_for_artist(token, "Madonna")
-print(result["name"])
-artist_id = result["id"]
-songs = get_songs_by_artist(token, artist_id)
-for idx, song in enumerate(songs):
-    print(f"{idx + 1}. {song['name']}")
+def main():
+    token = get_token()
+    result = search_for_artist(token, "Soda Stereo")
+    print(result["name"])
+    artist_id = result["id"]
+    songs = get_songs_by_artist(token, artist_id)
+    for idx, song in enumerate(songs):
+        print(f"{idx + 1}. {song['name']}")
+
+
+if __name__ == "__main__":
+    main()
